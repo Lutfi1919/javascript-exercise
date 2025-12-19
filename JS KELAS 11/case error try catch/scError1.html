@@ -20,49 +20,47 @@
                 }else if(!parseInt(aktifitas)) {
                     throw "Error3";
                 }
-            }catch(err) {
-                if(err == "Error1") {
+            } catch(err) {
+                if (err == "Error1") {
                     alert("Error! pilihan tidak tersedia");
                 }
-                if(err == "Error2") {
+                if (err == "Error2") {
                     alert("Error! anda tidak mengisi input pilihan");
                 }
-                if(err == "Error3") {
+                if (err == "Error3") {
                     alert("Error! nilai bukan angka");
                 }
             }
 
-            if(aktifitas == 1) {
+            if (aktifitas == 1) {
                 let angka = prompt('Masukkan angka desimal dengan (.) titik');
                 try {
-                if(angka.includes(',')) {
-                    throw "Error4";
+                    if(angka.includes(',')) {
+                        throw "Error4";
+                    }
+                    else if(parseFloat(angka) % 1 == 0){
+                        throw "Error5";
+                    }
+                    else if(angka == ""){
+                        throw "Error6";
+                    }
+                    else if(parseFloat(angka)){
+                        alert('Pembulatan dari angka'+ " " + angka + " " + "=" + "" + " " + Math.round(angka));
+                    }
+                } catch(err) {
+                    if(err == "Error4") {
+                        alert("Error! gunakan titik (.) sebagai tanda desimal");
+                    }
+                    if(err == "Error5") {
+                        alert("Error! angka harus desimal");
+                    }
+                    if(err == "Error6") {
+                        alert("Error! anda tidak mengisi input");
+                    }
                 }
-                else if(parseFloat(angka) % 1 == 0){
-                    throw "Error5";
-                }
-                else if(angka == ""){
-                    throw "Error6";
-                }
-                else if(parseFloat(angka)){
-                    alert('Pembulatan dari angka'+ " " + angka + " " + "=" + "" + " " + Math.round(angka));
-                }
-
-            }catch(err) {
-                if(err == "Error4") {
-                    alert("Error! gunakan titik (.) sebagai tanda desimal");
-                }
-                if(err == "Error5") {
-                    alert("Error! angka harus desimal");
-                }
-                if(err == "Error6") {
-                    alert("Error! anda tidak mengisi input");
-                }
-            
-            }
             }
 
-            if(aktifitas == 2) {
+            if (aktifitas == 2) {
                 let umur = prompt('Masukkan tahun lahir anda');
                 let tahun = new Date().getFullYear();
                 

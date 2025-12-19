@@ -9,33 +9,35 @@
     <script>
         let input = parseInt(
             prompt(
-            "Berapa uang yang ingin Anda ambil(Nomimal harus kelipatan 50.000)?"
+                "Berapa uang yang ingin Anda ambil(Nomimal harus kelipatan 50.000)?"
             )
         );
         const saldo = 5000000;
         const limit = 2000000;
         try {
             if (input >= saldo) {
-            throw "error1";
+                throw "error1";
             } else if (input >= limit) {
-            throw "error2";
+                throw "error2";
             } else if (input % 50000 !== 0) {
-            throw "error3";
+                throw "error3";
+            }else{
+                alert("saldo anda sekarang menjadi Rp." + parseInt(saldo-input).toLocaleString('id-ID'));
             }
         } catch (error) {
             if ((error == "error1")) {
-            alert("Error! saldo anda tidak mencukupi");
+                alert("Error! saldo anda tidak mencukupi");
             }
 
             if ((error == "error2")) {
-            alert("Error! melampaui limit penarikan harian");
+                alert("Error! melampaui limit penarikan harian");
             }
             if ((error == "error3")) {
-            alert("Error! uang yang tersedia hanya kelipatan 50.000");
+                alert("Error! uang yang tersedia hanya kelipatan 50.000");
             }
         } finally {
             alert("Silakan ambil kartu anda");
         }
-        </script>
-    </body>
+    </script>
+</body>
 </html>
