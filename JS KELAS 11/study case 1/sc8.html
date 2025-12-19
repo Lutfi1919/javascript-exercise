@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO 8</title>
+</head>
+<body>
+    <script>
+        let menu = ["Nasi Goreng", "Mie Goreng", "Mie Kuah", "Kwetiaw"];
+        let minLength = menu[0].length;
+        let kecil = menu[0];
+
+        menu.forEach(myFunction)
+
+        function myFunction(item) {
+            let length = item.length;
+            
+            if (length < minLength) {
+                minLength = length;
+                kecil = item;
+            }
+
+        }
+
+        alert("Kata Paling Kecil: " + kecil);
+    </script>
+</body>
+</html>

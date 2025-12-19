@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO 3</title>
+</head>
+<body>
+    <h1 id="kata">anjing lu</h1>
+    <script>
+        let badwords = ['asu', 'anjing', 'tai'];
+        let text = document.getElementById('kata').innerHTML;
+        badwords.forEach(word => {
+            if (word == "asu"){
+                text = text.replace(word, '***');
+            } else if (word == "anjing"){
+                text = text.replace(word, '******');
+            } else{
+                text = text.replace(word, '***');
+            }
+        });
+       
+        document.getElementById('kata').innerHTML = text;
+    </script>
+</body>
+</html>

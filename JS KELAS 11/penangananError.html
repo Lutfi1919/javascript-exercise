@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // PRINSIP TRY CATCH
+        // jalanin kode yang ada di try, kalo error jalanin kode yang ada di catch
+        function dapatkanSaldo() {
+	        return 1000000;
+        }
+        try {
+            alert("Sisa saldo rekening anda Rp. " + dapatkanSaldo());
+        } catch(err) {
+            alert("Ada yang salah! \n" + err.name + " " + err.message);
+        } finally {
+            alert("Terimakasih telah menjadi nasabah bank kami");
+        }
+
+        // throw
+        let usia = prompt("Masukkan usia anda", "");
+        try {
+            if(parseInt(usia) > 100 || parseInt(usia) < 0) {
+                throw "Error1";
+            }else if(usia == "") {
+                throw "Error2";
+            }else if(!parseInt(usia)) {
+                throw "Error3";
+            }
+        }catch(err) {
+            if(err == "Error1") {
+                alert("Error! nilai input usia di luar rentang");
+            }
+            if(err == "Error2") {
+                alert("Error! anda tidak mengisi input usia");
+            }
+            if(err == "Error3") {
+                alert("Error! nilai bukan angka");
+            }
+        }
+        if(usia > 0 && usia < 10) {
+            alert("Tiket yang harus dibayar Rp. 25.000");
+        }else if(usia >= 10 && usia < 40) {
+            alert("Tiket yang harus dibayar Rp. 45.000");
+        }
+    </script>
+</body>
+</html>

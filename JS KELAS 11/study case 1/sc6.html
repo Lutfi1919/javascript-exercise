@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO 6</title>
+</head>
+<body>
+    <script>
+        function cekMultiple(number) {
+            let hasil = [];
+            for (let i = 1; i <= number / 2; i++) {
+                let hasilAngka = number / i;
+                if (Number.isInteger(hasilAngka)) {
+                    hasil.push(i);
+                }
+            }
+            hasil.forEach((number) => {
+                console.log(number);
+            });
+        }
+
+        cekMultiple(20);
+    </script>
+</body>
+</html>

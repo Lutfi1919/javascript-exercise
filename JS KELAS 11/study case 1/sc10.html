@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NO 5</title>
+    <title>NO 10</title>
 </head>
 <body>
     <script>
-        let angka = prompt("masukin angka: ");
+        let nilai = [80, 76, 78, 82, 80, 91];
+        nilai.sort();
 
-        if (angka % 3 == 1) {
-            alert(Math.floor(angka / 3));
-        } else {
-            alert(angka / 3);
-        }
+        let max = nilai.slice(-3);
+        alert(max);
     </script>
 </body>
 </html>

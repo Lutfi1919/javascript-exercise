@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            
+        let aktifitas = prompt(`Pilih hal yang akan anda lakukan (1/2): 
+        1. Membulatkan Angka
+        2. Menghitung Umur`);
+    
+            try {
+                if(parseInt(aktifitas) > 2) {
+                    throw "Error1";
+                }else if(aktifitas == "") {
+                    throw "Error2";
+                }else if(!parseInt(aktifitas)) {
+                    throw "Error3";
+                }
+            }catch(err) {
+                if(err == "Error1") {
+                    alert("Error! pilihan tidak tersedia");
+                }
+                if(err == "Error2") {
+                    alert("Error! anda tidak mengisi input pilihan");
+                }
+                if(err == "Error3") {
+                    alert("Error! nilai bukan angka");
+                }
+            }
+
+            if(aktifitas == 1) {
+                let angka = prompt('Masukkan angka desimal dengan (.) titik');
+                try {
+                if(angka.includes(',')) {
+                    throw "Error4";
+                }
+                else if(parseFloat(angka) % 1 == 0){
+                    throw "Error5";
+                }
+                else if(angka == ""){
+                    throw "Error6";
+                }
+                else if(parseFloat(angka)){
+                    alert('Pembulatan dari angka'+ " " + angka + " " + "=" + "" + " " + Math.round(angka));
+                }
+
+            }catch(err) {
+                if(err == "Error4") {
+                    alert("Error! gunakan titik (.) sebagai tanda desimal");
+                }
+                if(err == "Error5") {
+                    alert("Error! angka harus desimal");
+                }
+                if(err == "Error6") {
+                    alert("Error! anda tidak mengisi input");
+                }
+            
+            }
+            }
+
+            if(aktifitas == 2) {
+                let umur = prompt('Masukkan tahun lahir anda');
+                let tahun = new Date().getFullYear();
+                
+                try {
+                    if (umur > tahun ) {
+                        throw "Error7";
+                    }
+                    else if(umur == ""){
+                        throw "Error8";
+                    } else if(!parseInt(umur)) {
+                        throw "Error9";
+                    } else if(parseInt(umur)) {
+                        alert('Umur anda sekarang = ' +  parseInt(tahun-umur));
+                    }
+    
+                } catch(err) {
+                    if(err == "Error7") {
+                        alert("Tahun tidak diperkenankan");
+                    }
+                    if(err == "Error8") {
+                        alert("Error! anda tidak mengisi input");
+                    }
+                    if(err == "Error9") {
+                        alert("Error! nilai bukan angka");
+                    }
+                }
+            }      
+        </script>
+    </body>
+</html>
