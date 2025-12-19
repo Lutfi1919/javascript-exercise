@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menu = ["Nasi Goreng", "Mie Goreng", "Mie Kuah", "Kwetiaw"];
+        
+        alert(`MENU-MENU HARI INI
+        Nasi Goreng
+        Mie Goreng
+        Mie Kuah
+        Kwetiaw`);
+        
+        let makan = prompt("Pilih menu yang ingin anda makan: ");
+
+        if (makan === "Nasi Goreng") {
+            alert("Lu mesen menu " + menu[0]);
+        } else if (makan === "Mie Goreng") {
+            alert("Lu mesen menu " + menu[1]);
+        } else if (makan === "Mie Kuah") {
+            alert("Lu mesen menu " + menu[2]);
+        } else if (makan === "Kwetiaw") {
+            alert("Lu mesen menu " + menu[3]);
+        } else {
+            alert("Menu yang lu pesen gaada di daftar menu!");
+        }
+    </script>
+</body>
+</html>
