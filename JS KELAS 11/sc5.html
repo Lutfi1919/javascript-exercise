@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let menu = ["Nasi Goreng", "Mie Goreng", "Mie Kuah", "Kwetiaw"];
+
+        let pilihan = prompt("pilih menu: (masukkan angka)");
+        let panjang = menu.length;
+        let hasil = menu[pilihan];
+
+        if (pilihan > panjang) {
+            alert("Menu tidak tersedia");
+        } else {
+            alert(`Menu yang lu pilih ${hasil}`);
+        }
+    </script>
+</body>
+</html>

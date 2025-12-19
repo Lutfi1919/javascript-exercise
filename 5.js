@@ -1,0 +1,5 @@
+let a = 2;
+let b = 4;
+let c = Math.sqrt (a**2 + b**2);{
+    console.log("print c",c);
+}
